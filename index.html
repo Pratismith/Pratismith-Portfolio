@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pratismith | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Pratismith Gogoi - AI Engineer, Cybersecurity Enthusiast, and Full-Stack Developer. View my portfolio, projects, and skills.">
+    <meta name="keywords" content="Pratismith Gogoi, Portfolio, AI Engineer, Cybersecurity, Full-Stack Developer, Python, Web Development">
+    <meta name="author" content="Pratismith Gogoi">
+    <meta property="og:title" content="Pratismith Gogoi | Portfolio">
+    <meta property="og:description" content="Aspiring AI Engineer & Cybersecurity Enthusiast. Check out my work!">
+    <meta property="og:image" content="images/profile.jpg">
+    
+    <!-- Google Fonts: Inter & Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
   <body>
     <!-- Background -->
@@ -19,16 +28,25 @@
       <div class="logo">
         <a href="index.html">Pratismith G.</a>
       </div>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
       <ul class="nav-links">
-        <li><a href="index.html" class="home-link">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </li>
       </ul>
     </nav>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero fade-in">
       <div class="hero-content">
         <div class="hero-text">
           <h1>Hi, I'm <span class="highlight">Pratismith Gogoi</span></h1>
@@ -36,35 +54,26 @@
             Aspiring AI Engineer | Cybersecurity Enthusiast | Full-Stack
             Developer
           </p>
-          <a href="assets/resume.pdf" class="btn resume" target="_blank">
-            <i class="fas fa-file-alt"></i> View Resume
-          </a>
-
-          <a
-            href="https://linkedin.com/in/pratismith-gogoi"
-            class="btn linkedin"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-
-          <a
-            href="https://github.com/Pratismith"
-            class="btn github"
-            target="_blank"
-          >
-            <i class="fab fa-github"></i> GitHub
-          </a>
+          <div class="cta-buttons">
+            <a href="assets/resume.pdf" class="btn resume" target="_blank">
+                <i class="fas fa-file-alt"></i> View Resume
+            </a>
+            <a href="https://github.com/Pratismith" class="btn github" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/pratismith-gogoi" class="btn linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
         </div>
         <div class="hero-image">
-          <img src="images/profile.jpg" alt="Pratismith Gogoi" />
+          <img src="images/profile.jpg" alt="Pratismith Gogoi" loading="lazy" />
         </div>
       </div>
     </section>
 
     <!-- Terminal Section -->
-    <!-- ===== Terminal Section ===== -->
-    <section class="terminal-container">
+    <section class="terminal-container fade-in">
       <div class="terminal" id="terminal">
         <div class="terminal-header">
           <span class="dot red"></span>
@@ -89,26 +98,9 @@
         </div>
       </div>
     </section>
+    
     <!-- Footer -->
     <footer class="footer">&copy; 2025 Pratismith Gogoi | Built with ❤️</footer>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <script src="particles.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="script.js"></script>

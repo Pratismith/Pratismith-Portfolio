@@ -9,7 +9,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <meta name="description" content="Explore Pratismith Gogoi's projects in Cybersecurity, AI, and Web Development.">
+  <meta name="keywords" content="Projects, Cybersecurity Projects, AI Projects, Python, Web Development">
+  <meta name="author" content="Pratismith Gogoi">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -23,65 +31,124 @@
   <div class="logo">
     <a href="index.html">Pratismith G.</a>
   </div>
+  <div class="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
   <ul class="nav-links">
-    <li><a href="index.html" class="home-link">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </li>
   </ul>
 </nav>
 
 <!-- Projects Section -->
-<section class="projects-section">
+<section class="projects-section fade-in">
   <h1 class="section-title"> My Projects</h1>
   <div class="projects-grid">
 
-    <a href="https://github.com/Pratismith/Packet-Sniffer" target="_blank" class="project-card hover-preview" data-img="images/sniffer.jpg">
-      <h2>SniffNet: Packet Sniffer</h2>
-      <p>Python-based sniffer using <strong>Scapy</strong> & <strong>Tkinter</strong>. Captured up to 55 packets/sec with &lt;1s latency for real-time analysis.</p>
-      <span class="tech">Python | Scapy | Tkinter</span>
+    <!-- 1. AgroDoctor (High Tech / AI) -->
+    <a href="https://github.com/Pratismith/AgroDoctor-Plant-Disease" target="_blank" class="project-card hover-preview" data-img="images/agro.jpeg">
+      <h2>AgroDoctor: AI Plant Disease Detection</h2>
+      <p>End-to-end AI system using <strong>ResNet18</strong> and computer vision to detect crop diseases from leaf images. Deployed as an interactive Streamlit app.</p>
+      <span class="tech">Python | PyTorch | OpenCV | Streamlit</span>
     </a>
 
-    <a href="https://github.com/Pratismith/Password_Checker" target="_blank" class="project-card hover-preview" data-img="images/password.jpg">
-      <h2>PassStrong: Password Checker</h2>
-      <p>Password strength analyzer with <strong>95% accuracy</strong> using entropy scoring & heuristics.</p>
-      <span class="tech">HTML | CSS | JS | Flask</span>
+    <!-- 2. Talk to Kanha (AI / Product) -->
+    <a href="https://github.com/Pratismith/Kanha" target="_blank" class="project-card hover-preview" data-img="images/kanha.jpeg">
+      <h2>Talk to Kanha: AI Emotional Support</h2>
+      <p>Empathetic AI chatbot blending modern NLP with <strong>Bhagavad Gita</strong> wisdom to provide spiritual and emotional guidance. Features emotion-synced music.</p>
+      <span class="tech">Python | GenAI | NLP | Voice API</span>
     </a>
 
-    <a href="https://github.com/Pratismith/Steganography" target="_blank" class="project-card hover-preview" data-img="images/steganography.jpg">
-      <h2>StegaCrypt: Steganography</h2>
-      <p>Tool to encode/decode hidden messages in images using <strong>LSB encoding</strong>. Achieved 98% accuracy.</p>
-      <span class="tech">Python | OpenCV | Streamlit</span>
-    </a>
-
-    <a href="https://github.com/Pratismith/Cafe_website" target="_blank" class="project-card hover-preview" data-img="images/cafe.jpg">
-      <h2>Neighbourhood: Café Website</h2>
-      <p>Responsive café website with Firebase backend. Boosted online visibility by <strong>40%</strong>.</p>
-      <span class="tech">HTML | CSS | JavaScript | Firebase</span>
-    </a>
-
+    <!-- 3. Graph-Based Malware Analysis (AI / Security) -->
     <a href="https://github.com/PratismithGogoi/Graph-Malware" target="_blank" class="project-card hover-preview" data-img="images/malware.jpg">
       <h2>Graph-Based Malware Analysis</h2>
       <p>ML model using <strong>CFGs</strong> & GNN to classify files as malicious or benign.</p>
       <span class="tech">Python | Radare2 | PyTorch | GNN</span>
     </a>
 
-    <a href="https://github.com/Pratismith/Java_mini_project" target="_blank" class="project-card hover-preview" data-img="images/resultify.jpg">
-      <h2>Resultify: Result Generator</h2>
-      <p>Automated results for 50+ students, reducing manual effort by 70%.</p>
-      <span class="tech">JavaFX | JDBC | MySQL</span>
-    </a>
-
+    <!-- 4. FakeNews-AI (AI / NLP) -->
     <a href="https://github.com/PratismithGogoi/FakeNews-AI" target="_blank" class="project-card hover-preview" data-img="images/fakenews.jpg">
       <h2>FakeNews-AI</h2>
       <p>AI-powered fake news classifier with <strong>92% accuracy</strong> using deep learning (RNN, CNN, Transformers).</p>
       <span class="tech">Python | TensorFlow | NLTK</span>
     </a>
 
+    <!-- 5. SniffNet (Network Security) -->
+    <a href="https://github.com/Pratismith/Packet-Sniffer" target="_blank" class="project-card hover-preview" data-img="images/sniffer.jpg">
+      <h2>SniffNet: Packet Sniffer</h2>
+      <p>Python-based sniffer using <strong>Scapy</strong> & <strong>Tkinter</strong>. Captured up to 55 packets/sec with &lt;1s latency for real-time analysis.</p>
+      <span class="tech">Python | Scapy | Tkinter</span>
+    </a>
+
+    <!-- 6. StegaCrypt (Security) -->
+    <a href="https://github.com/Pratismith/Steganography" target="_blank" class="project-card hover-preview" data-img="images/steganography.jpg">
+      <h2>StegaCrypt: Steganography</h2>
+      <p>Tool to encode/decode hidden messages in images using <strong>LSB encoding</strong>. Achieved 98% accuracy.</p>
+      <span class="tech">Python | OpenCV | Streamlit</span>
+    </a>
+
+    <!-- 7. Assam Tales (Startup / Business) -->
+    <a href="https://imaginative-bubblegum-075886.netlify.app/" target="_blank" class="project-card hover-preview" data-img="images/assamtales.png">
+      <h2>Assam Tales: Digital Strategy Studio</h2>
+      <p>Region-focused digital marketing studio helping Northeast India's tourism businesses grow through storytelling and data-driven content strategy.</p>
+      <span class="tech">React | Content Strategy | SEO | Business</span>
+    </a>
+
+    <!-- 8. BookNest (Full Stack Engineering) -->
+    <a href="https://booknest6.netlify.app/" target="_blank" class="project-card hover-preview" data-img="images/BookNest.png">
+      <h2>BookNest: MERN Stack Review App</h2>
+      <p>Full-stack book review platform with <strong>JWT auth</strong>, CRUD operations, and star ratings. Production-ready deployment on Vercel & Firebase.</p>
+      <span class="tech">MongoDB | Express | React | Node.js</span>
+    </a>
+
+    <!-- 9. Evensia (Frontend / Design) -->
+    <a href="https://evensia00.netlify.app/" target="_blank" class="project-card hover-preview" data-img="images/evensia.png">
+      <h2>Evensia: Event Discovery Platform</h2>
+      <p>Modern event discovery interface with a focus on clean <strong>UI/UX</strong>. Features curated listings, category navigation, and a responsive layout.</p>
+      <span class="tech">React | CSS3 | UI/UX Design</span>
+    </a>
+
+    <!-- 10. PassStrong (Utility / Security) -->
+    <a href="https://github.com/Pratismith/Password_Checker" target="_blank" class="project-card hover-preview" data-img="images/password.jpg">
+      <h2>PassStrong: Password Checker</h2>
+      <p>Password strength analyzer with <strong>95% accuracy</strong> using entropy scoring & heuristics.</p>
+      <span class="tech">HTML | CSS | JS | Flask</span>
+    </a>
+
+    <!-- 11. LeasePrice-ML (ML / Regression) -->
     <a href="https://github.com/PratismithGogoi/LeasePrice-ML" target="_blank" class="project-card hover-preview" data-img="images/leaseprice.jpg">
       <h2>LeasePrice-ML</h2>
       <p>House lease price prediction with &lt;10% error using regression models.</p>
       <span class="tech">Python | Pandas | Scikit-Learn</span>
+    </a>
+
+    <!-- 12. Neighbourhood (Web) -->
+    <a href="https://github.com/Pratismith/Cafe_website" target="_blank" class="project-card hover-preview" data-img="images/cafe.jpg">
+      <h2>Neighbourhood: Café Website</h2>
+      <p>Responsive café website with Firebase backend. Boosted online visibility by <strong>40%</strong>.</p>
+      <span class="tech">HTML | CSS | JavaScript | Firebase</span>
+    </a>
+
+    <!-- 13. Resultify (Automation) -->
+    <a href="https://github.com/Pratismith/Java_mini_project" target="_blank" class="project-card hover-preview" data-img="images/resultify.jpg">
+      <h2>Resultify: Result Generator</h2>
+      <p>Automated results for 50+ students, reducing manual effort by 70%.</p>
+      <span class="tech">JavaFX | JDBC | MySQL</span>
+    </a>
+
+    <!-- 14. Weather App (Beginner / Utility) -->
+    <a href="https://github.com/Pratismith/WeatherPredictor" target="_blank" class="project-card hover-preview" data-img="images/weather.png">
+      <h2>AJAX Weather App</h2>
+      <p>Single-page weather dashboard using <strong>Open-Meteo API</strong>. Converts city names to coordinates and fetches real-time data without API keys.</p>
+      <span class="tech">HTML | JavaScript (AJAX) | CSS</span>
     </a>
   </div>
 </section>
@@ -94,7 +161,7 @@
 
   <!-- Scripts -->
    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="particles.min.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>

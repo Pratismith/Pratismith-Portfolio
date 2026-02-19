@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Pratismith Gogoi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <meta name="description" content="Read articles by Pratismith Gogoi on Cybersecurity, AI, and Tech.">
+  <meta name="keywords" content="Blog, Cybersecurity Blog, AI Articles, Tech Blog, Pratismith Gogoi">
+  <meta name="author" content="Pratismith Gogoi">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Blog Specific Styles */
+    .blog-section {
+        padding: 6rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+        min-height: 80vh;
+    }
+    
+    .blog-card {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 230, 255, 0.15);
+    }
+    
+    .blog-date {
+        color: var(--accent-2);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .blog-title {
+        color: var(--white);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .blog-title:hover {
+        color: var(--accent);
+    }
+    
+    .blog-excerpt {
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .read-more {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .read-more:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Pratismith G.</a>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="home-link">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+          </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Blog Content -->
+  <section class="blog-section fade-in">
+    <h1 class="section-title">Latest Articles</h1>
+    
+    <!-- Article 1 -->
+    <!-- Article 1 -->
+    <article class="blog-card fade-in">
+        <span class="blog-date">Sep 22, 2025</span>
+        <a href="blogs/future-of-ai-in-cybersecurity.html" class="blog-title">The Future of AI in Cybersecurity</a>
+        <p class="blog-excerpt">
+            Explore how Artificial Intelligence is transforming cybersecurity, from AI-powered threat detection to AI-driven cyber attacks, risks, and future trends.
+        </p>
+        <a href="blogs/future-of-ai-in-cybersecurity.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="blog-card fade-in">
+        <span class="blog-date">Sep 22, 2025</span>
+        <a href="blogs/getting-started-with-malware-analysis.html" class="blog-title">Getting Started with Malware Analysis</a>
+        <p class="blog-excerpt">
+            A beginner's guide to setting up a safe lab environment, using tools like Wireshark and Ghidra, and understanding the basics of static vs. dynamic analysis.
+        </p>
+        <a href="blogs/getting-started-with-malware-analysis.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="blog-card fade-in">
+        <span class="blog-date">Aug 10, 2025</span>
+        <a href="blogs/building-secure-web-apps-with-react-and-nodejs.html" class="blog-title">Building Secure Web Apps with React & Node.js</a>
+        <p class="blog-excerpt">
+            Best practices for securing your MERN stack application, covering JWT authentication, input validation, and preventing common OWASP vulnerabilities.
+        </p>
+        <a href="blogs/building-secure-web-apps-with-react-and-nodejs.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+    </article>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Pratismith Gogoi | Built with ❤️ 
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,9 +4,55 @@ window.onload = function () {
 
 
 /* Init ParticlesJS */
-particlesJS.load("particles-js", "particles.json", function () {
-  console.log("Particles.js loaded");
-});
+const particlesContainer = document.getElementById("particles-js");
+if (particlesContainer) {
+  // Determine correct path for particles.json based on location
+  const configPath = window.location.pathname.includes("/blogs/") 
+    ? "../particles.json" 
+    : "particles.json";
+
+  particlesJS.load("particles-js", configPath, function () {
+    console.log("Particles.js loaded");
+  });
+}
+
+// Theme Toggle Logic
+const themeToggleButton = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  updateThemeIcon(currentTheme);
+} else {
+    // Default to dark, no action needed as CSS :root is dark
+}
+
+if (themeToggleButton) {
+  themeToggleButton.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      updateThemeIcon("dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      updateThemeIcon("light");
+    }
+  });
+}
+
+function updateThemeIcon(theme) {
+    if (!themeToggleButton) return;
+    const icon = themeToggleButton.querySelector("i");
+    if (theme === "light") {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+}
 
 const input = document.getElementById("terminal-input");
 const terminalBody = document.getElementById("terminal-body");
@@ -85,37 +131,39 @@ function handleCommand(command) {
   }
 }
 
-input.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    let command = input.value.trim().toLowerCase();
-    if (command.length === 0) return;
+if (input && terminalBody) {
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      let command = input.value.trim().toLowerCase();
+      if (command.length === 0) return;
 
-    const newLine = document.createElement("div");
-    newLine.classList.add("line");
-    newLine.innerHTML = `<span class="prompt">$</span> ${command}`;
-    terminalBody.insertBefore(newLine, input.parentElement);
+      const newLine = document.createElement("div");
+      newLine.classList.add("line");
+      newLine.innerHTML = `<span class="prompt">$</span> ${command}`;
+      terminalBody.insertBefore(newLine, input.parentElement);
 
-    handleCommand(command);
+      handleCommand(command);
 
-    input.value = "";
-    terminalBody.scrollTop = terminalBody.scrollHeight;
-  }
-});
+      input.value = "";
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+  });
 
-// Clickable ls results
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("cmd-link")) {
-    let cmd = e.target.getAttribute("data-cmd");
-    // instead of fake keypress, directly run it
-    const newLine = document.createElement("div");
-    newLine.classList.add("line");
-    newLine.innerHTML = `<span class="prompt">$</span> ${cmd}`;
-    terminalBody.insertBefore(newLine, input.parentElement);
+  // Clickable ls results
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("cmd-link")) {
+      let cmd = e.target.getAttribute("data-cmd");
+      // instead of fake keypress, directly run it
+      const newLine = document.createElement("div");
+      newLine.classList.add("line");
+      newLine.innerHTML = `<span class="prompt">$</span> ${cmd}`;
+      terminalBody.insertBefore(newLine, input.parentElement);
 
-    handleCommand(cmd);
-    terminalBody.scrollTop = terminalBody.scrollHeight;
-  }
-});
+      handleCommand(cmd);
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+  });
+}
 
 // Always scroll to top when Home is clicked
 document.querySelectorAll(".home-link").forEach(link => {
@@ -166,3 +214,105 @@ document.querySelectorAll(".hover-preview").forEach(card => {
     }
   });
 });
+
+
+/* Mobile Menu Toggle */
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    
+    // Animate Links
+    links.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        // slight delay for staggering effect handled via CSS transition-delay
+        // but we can add keyframes if we wanted more complex animation
+      }
+    });
+
+    // Toggle Hamburger Icon (optional: change to X)
+    hamburger.classList.toggle("toggle");
+  });
+}
+
+// Close menu when clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("toggle");
+  });
+});
+
+
+/* Scroll Animations */
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
+
+
+/* Terminal Typing Effect */
+function typeText(element, text, speed = 50, callback) {
+  let i = 0;
+  element.innerHTML = "";
+  let timer = setInterval(() => {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    } else {
+      clearInterval(timer);
+      if (callback) callback();
+    }
+  }, speed);
+}
+
+if (terminalBody) {
+  // Clear initial static content (except input)
+  // We will reconstruct the welcome message dynamically
+  const inputLine = terminalBody.querySelector(".input-line");
+  terminalBody.innerHTML = ""; // Clear everything
+  
+  // Create lines
+  const line1 = document.createElement("div");
+  line1.classList.add("line");
+  terminalBody.appendChild(line1);
+
+  const line2 = document.createElement("div");
+  line2.classList.add("line");
+  
+  const separator = document.createElement("div");
+  separator.classList.add("line");
+  separator.textContent = "---------------------------------------------";
+
+  // Sequence
+  typeText(line1, "Welcome to Pratismith Gogoi's Portfolio!", 40, () => {
+     terminalBody.appendChild(line2);
+     typeText(line2, "Type 'help' to see available commands.", 30, () => {
+         terminalBody.appendChild(separator);
+         terminalBody.appendChild(inputLine);
+         inputLine.querySelector("input").focus();
+     });
+  });
+}
+
+
+

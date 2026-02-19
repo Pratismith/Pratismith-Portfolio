@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Secure Web Apps | Pratismith Gogoi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">
+      <a href="../index.html">Pratismith G.</a>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="home-link">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="blog-hero" style="background: radial-gradient(circle at center, #0b222c 0%, #0b0f14 100%);">
+    <div class="blog-hero-content fade-in">
+        <h1>Building Secure Web Apps with React & Node.js</h1>
+        <div class="blog-meta-hero">
+            <span><i class="far fa-calendar-alt"></i> Aug 10, 2025</span>
+            <span><i class="far fa-clock"></i> 9 min read</span>
+            <span><i class="fas fa-shield-alt"></i> Web Security</span>
+        </div>
+    </div>
+  </header>
+
+  <main class="blog-container-glass fade-in">
+    <div class="blog-content">
+      <p class="lead" style="font-size: 1.3rem; color: #fff; margin-bottom: 2rem;">
+        In the age of data breaches, security cannot be an afterthought. If you are building with the MERN stack (MongoDB, Express, React, Node), you need to bake security into every layer.
+      </p>
+
+      <h2>The Threat Landscape</h2>
+      <p>Before defending, we must know what we are up against. The <strong>OWASP Top 10</strong> highlights the most critical risks:</p>
+      <ul>
+        <li><strong>Injection (SQL/NoSQL):</strong> Attackers interfering with database queries.</li>
+        <li><strong>XSS (Cross-Site Scripting):</strong> Injecting malicious scripts into your frontend.</li>
+        <li><strong>Broken Auth:</strong> Weak session tracking or credential leaks.</li>
+      </ul>
+
+      <h2>Securing the Backend (Node.js)</h2>
+      <p>The server is your fortress. Here is how to lock it down.</p>
+
+      <h3>1. JWT Best Practices</h3>
+      <p>JSON Web Tokens are standard, but often misused. Never store sensitive tokens in `localStorage` where XSS attacks can read them.</p>
+
+      <pre><code>// Secure Cookie approach for JWT
+res.cookie('token', token, {
+  httpOnly: true, // Prevents JS access
+  secure: true,   // HTTPS only
+  sameSite: 'strict'
+});
+</code></pre>
+
+      <h3>2. Rate Limiting</h3>
+      <p>Stop brute-force attacks by limiting request frequency.</p>
+
+      <h2>Securing the Frontend (React)</h2>
+      <p>The client side is untrusted territory.</p>
+      <ul>
+        <li><strong>Sanitize Inputs:</strong> Always validate user input before rendering.</li>
+        <li><strong>DangerouslySetInnerHTML:</strong> As the name says, avoid this React prop unless absolutely necessary and sanitized.</li>
+        <li><strong>Dependencies:</strong> Run `npm audit` regularly to patch vulnerable packages.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Security is not a feature; it's a mindset. By implementing these practices in your MERN stack applications, you significantly reduce the attack surface and protect your users.</p>
+
+      <div class="author-box">
+          <img src="../images/profile.jpg" alt="Author" class="author-img">
+          <div class="author-info">
+              <h4>Pratismith Gogoi</h4>
+              <p>Cybersecurity Engineer & AI Enthusiast. Passionate about securing the future of tech.</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="blog-footer-nav" style="text-align: center;">
+      <a href="../blog.html" class="btn-back" style="font-size: 1.2rem;"><i class="fas fa-arrow-left"></i> Back to All Articles</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Pratismith Gogoi | Built with ❤️ 
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -6,7 +6,13 @@
   <title>Contact | Pratismith Gogoi</title>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <meta name="description" content="Contact Pratismith Gogoi. Get in touch for collaborations, projects, or inquiries.">
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -20,16 +26,25 @@
   <div class="logo">
     <a href="index.html">Pratismith G.</a>
   </div>
+  <div class="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
   <ul class="nav-links">
-    <li><a href="index.html" class="home-link">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </li>
   </ul>
 </nav>
 
   <!-- Contact Section -->
-  <section class="contact-section">
+  <section class="contact-section fade-in">
     <div class="contact-container">
       <h1 class="section-title">Get in Touch</h1>
       <p class="section-subtitle">I'd love to connect! Whether it's a project, collaboration, or just a hello — feel free to reach out.</p>

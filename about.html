@@ -4,205 +4,243 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Pratismith Gogoi</title>
+  <meta name="description" content="Learn more about Pratismith Gogoi - Education, Internships, Skills, and Certifications.">
+  <meta name="keywords" content="About Pratismith, Education, Skills, Internships, Cybersecurity, AI">
+  <meta name="author" content="Pratismith Gogoi">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
-  <!-- Background Animation -->
-  <div id="particles-js"></div>
-
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html">Pratismith G.</a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="home-link">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-  <!-- Hero / Intro Section -->
-  <section class="about-hero">
-    <div class="profile-pic">
-      <img src="images/profile.jpg" alt="Pratismith Gogoi">
-    </div>
-    <div class="about-intro">
-      <h1>About Me</h1>
-      <p>
-        I’m <span class="highlight">Pratismith Gogoi</span>, a <b>Computer Science Graduate</b> and an entry-level <strong>Cybersecurity Engineer</strong> 
-        passionate about <strong>ethical hacking, malware analysis, and AI-driven security</strong>. <br>
-        Getting skilled in <b>Penetration Testing</b>, <b>Reverse Engineering,</b> and <b>Securing Modern Applications.</b> 
-        I enjoy learning new skills and building secure systems and exploring how <strong>AI & ML</strong> can transform cybersecurity.
-      </p>
-    </div>
-  </section>
-
-<!-- Education -->
-<section class="about-section">
-  <h2>🎓 Education</h2>
-  <div class="card">
-    <div class="card-header">
-        <img src="images/du_logo.png" alt="Logo" class="card-logo">
-      B.Tech in Computer Science Engineering , Dibrugarh University (2021 – 2025)
-    </div>
-    
-  </div>
-</section>
-
-
-
-<!-- Internships -->
-<section class="about-section">
-  <h2>💼 Internships</h2>
-  <div class="timeline">
-    
-    <div class="timeline-item">
-      <div class="timeline-icon"><img src="images/edunet.jpg" alt="Cybersecurity Icon">
-  </div>
-      <div class="timeline-content">
-        <h3>
-          <a href="certificates/AICTE Cybersecurity .pdf" target="_blank">
-            Cyber Security Intern – Edunet Foundation (AICTE)
-          </a>
-        </h3>
-        <p>Conducted 10+ security exercises (SQL Injection, IDS, Steganography, Cryptography) improving detection speed by 25%.</p>
+  
+  <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Pratismith G.</a>
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon"><img src="images/IITG_logo.png" alt="iitg icon"></div>
-      <div class="timeline-content">
-        <h3>
-          <a href="certificates/IITG ML.pdf" target="_blank">
-            AI & ML Intern – IIT Guwahati
-          </a>
-        </h3>
-        <p>Built a recommender system with 87% preference match accuracy using collaborative filtering.</p>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </li>
+      </ul>
+    </nav>
+  
+
+  <!-- Premium Hero -->
+  <header class="about-hero-premium">
+    <div class="about-profile-wrapper fade-in">
+        <div class="about-profile-ring"></div>
+        <img src="images/profile.jpg" alt="Pratismith Gogoi" class="about-profile-img">
     </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon"><img src="images/asom_mala_icon.jpg" alt="asom mala icon"></div>
-      <div class="timeline-content">
-        <h3>
-          <a href="certificates/ASOM_MALA.png" target="_blank">
-            Asom Mala Project Intern – Govt. of Assam
-          </a>
-        </h3>
-        <p>Supported road infrastructure planning, reducing documentation errors by 20%.</p>
-      </div>
+    <div class="fade-in">
+        <h1 class="about-title">Hi, I'm Pratismith</h1>
+        <p class="about-subtitle">AI Engineer & Cybersecurity Specialist</p>
     </div>
+  </header>
 
-  </div>
-</section>
+  <!-- Main Content Glass Container -->
+  <main class="about-container-glass">
+      
+      <!-- Intro Section -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-user-astronaut"></i>
+            <h2>Who Am I?</h2>
+        </div>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #ddd;">
+            I’m a <strong>Computer Science Graduate</strong> and an entry-level <strong>Cybersecurity Engineer</strong> passionate about 
+            <span style="color: var(--accent);">ethical hacking, malware analysis, and AI-driven security</span>.
+            Currently deepening my skills in <strong>Penetration Testing</strong> and <strong>Securing Modern Applications</strong>. 
+            I enjoy decoding complex security challenges and building robust, intelligent systems that stand the test of time.
+        </p>
+      </section>
 
+      <!-- Experience (Timeline) -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-briefcase"></i>
+            <h2>Professional Experience</h2>
+        </div>
+        
+        <div class="cyber-timeline">
+            <!-- Job 1 -->
+            <div class="cyber-timeline-item">
+                <div class="cyber-timeline-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="cyber-card">
+                    <h3><a href="certificates/JNV.pdf" target="_blank">Cybersecurity Trainer</a></h3>
+                    <span class="role">JNV West Siang, Arunachal Pradesh</span>
+                    <p>Conducted training sessions on cybersecurity awareness and best practices for students and staff.</p>
+                </div>
+            </div>
 
-<!-- Skills -->
-<section class="about-section">
-  <h2>🛠️ Technical Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card"><i class="fab fa-python"></i> Python</div>
-    <div class="skill-card"><i class="fas fa-code"></i> C++</div>
-    <div class="skill-card"><i class="fas fa-shield-alt"></i> Web Security</div>
-    <div class="skill-card"><i class="fab fa-linux"></i> Linux</div>
-    <div class="skill-card"><i class="fas fa-search"></i> Burp Suite</div>
-    <div class="skill-card"><i class="fas fa-network-wired"></i> Nmap</div>
-    <div class="skill-card"><i class="fas fa-bug"></i> Metasploit</div>
-    <div class="skill-card"><i class="fas fa-robot"></i> Machine Learning</div>
-    <div class="skill-card"><i class="fas fa-database"></i> MySQL</div>
-    <div class="skill-card"><i class="fas fa-fire"></i> Firebase</div>
-    <div class="skill-card"><i class="fab fa-react"></i> React</div>
-    <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
-  </div>
-</section>
+            <!-- Job 2 -->
+            <div class="cyber-timeline-item">
+                <div class="cyber-timeline-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="cyber-card">
+                    <h3><a href="certificates/AICTE Cybersecurity .pdf" target="_blank">Cyber Security Intern</a></h3>
+                    <span class="role">Edunet Foundation (AICTE)</span>
+                    <p>Conducted 10+ security exercises (SQL Injection, IDS, Steganography, Cryptography) improving detection speed by 25%.</p>
+                </div>
+            </div>
 
+            <!-- Job 3 -->
+            <div class="cyber-timeline-item">
+                <div class="cyber-timeline-icon"><i class="fas fa-brain"></i></div>
+                <div class="cyber-card">
+                    <h3><a href="certificates/IITG ML.pdf" target="_blank">AI & ML Intern</a></h3>
+                    <span class="role">IIT Guwahati</span>
+                    <p>Built a recommender system with 87% preference match accuracy using collaborative filtering.</p>
+                </div>
+            </div>
 
-<!-- Certifications -->
-<section class="about-section">
-  <h2>🏆 Certifications</h2>
-  <div class="certs-grid">
-    <a href="certificates/Google Cloud Computing Foundations Certificate.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-cloud"></i>
-      <span>Google Cloud Computing (Google)</span>
-    </a>
+            <!-- Job 4 -->
+            <div class="cyber-timeline-item">
+                <div class="cyber-timeline-icon"><i class="fas fa-road"></i></div>
+                <div class="cyber-card">
+                    <h3><a href="certificates/ASOM_MALA.png" target="_blank">Asom Mala Project Intern</a></h3>
+                    <span class="role">Govt. of Assam</span>
+                    <p>Supported road infrastructure planning, reducing documentation errors by 20%.</p>
+                </div>
+            </div>
+        </div>
+      </section>
 
-    <a href="certificates/OASIS.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-code"></i>
-      <span>Web Development (OASIS Infobyte)</span>
-    </a>
+      <!-- Education -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h2>Education</h2>
+        </div>
+        <div class="cyber-card" style="display: flex; align-items: center; gap: 20px;">
+            <img src="images/du_logo.png" alt="DU Logo" style="width: 50px; height: 50px; background: #fff; padding: 2px; border-radius: 5px;">
+            <div>
+                <h3 style="margin-bottom: 5px;">B.Tech in Computer Science Engineering</h3>
+                <span class="role">Dibrugarh University (2021 – 2025)</span>
+            </div>
+        </div>
+        <div class="cyber-card" style="display: flex; align-items: center; gap: 20px; margin-top: 1.5rem;">
+            <img src="images/trb.png" alt="TRB Icon" style="width: 50px; height: 50px; background: #fff; padding: 2px; border-radius: 5px; object-fit: contain;">
+            <div>
+                <h3 style="margin-bottom: 5px;">Higher Secondary</h3>
+                <span class="role">TRB Academy (2021)</span>
+            </div>
+        </div>
+        <div class="cyber-card" style="display: flex; align-items: center; gap: 20px; margin-top: 1.5rem;">
+            <img src="images/holyname.png" alt="Holy Name Icon" style="width: 50px; height: 50px; background: #fff; padding: 2px; border-radius: 5px; object-fit: contain;">
+            <div>
+                <h3 style="margin-bottom: 5px;">High School</h3>
+                <span class="role">Holy Name School (2019)</span>
+            </div>
+        </div>
+      </section>
 
-    <a href="Web Development Training_Internshala.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-laptop-code"></i>
-      <span>Web Development (Internshala)</span>
-    </a>
+      <!-- Skills -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-microchip"></i>
+            <h2>Technical Arsenal</h2>
+        </div>
+        <div class="skills-wrapper">
+            <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-pill"><i class="fas fa-code"></i> C++</div>
+            <div class="skill-pill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-pill"><i class="fab fa-react"></i> React</div>
+            <div class="skill-pill"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill-pill"><i class="fas fa-database"></i> MySQL</div>
+            <div class="skill-pill"><i class="fab fa-linux"></i> Linux</div>
+            <div class="skill-pill"><i class="fas fa-fire"></i> Firebase</div>
+            <div class="skill-pill"><i class="fas fa-robot"></i> Machine Learning</div>
+            
+            <div class="skill-pill" style="border-color: var(--accent-2);"><i class="fas fa-bug" style="color: var(--accent-2);"></i> Metasploit</div>
+            <div class="skill-pill" style="border-color: var(--accent-2);"><i class="fas fa-search" style="color: var(--accent-2);"></i> Burp Suite</div>
+            <div class="skill-pill" style="border-color: var(--accent-2);"><i class="fas fa-network-wired" style="color: var(--accent-2);"></i> Nmap</div>
+            <div class="skill-pill" style="border-color: var(--accent-2);"><i class="fas fa-shield-alt" style="color: var(--accent-2);"></i> Web Security</div>
+        </div>
+      </section>
 
-    <a href="certificates/MERN Stack (HawksCode).pdf" target="_blank" class="cert-card">
-      <i class="fas fa-layer-group"></i>
-      <span>MERN Stack (HawksCode)</span>
-    </a>
+      <!-- Certifications -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-trophy"></i>
+            <h2>Certifications</h2>
+        </div>
+        <div class="cert-grid-premium">
+            <a href="certificates/Google Cloud Computing Foundations Certificate.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-cloud"></i> <span>Google Cloud Computing</span>
+            </a>
+            <a href="certificates/OASIS.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-code"></i> <span>Web Development (OASIS)</span>
+            </a>
+            <a href="certificates/Ethical Hacking Training _Internshala.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-user-secret"></i> <span>Ethical Hacking (Internshala)</span>
+            </a>
+            <a href="certificates/IBM Cybersecurity.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-lock"></i> <span>Cybersecurity (IBM)</span>
+            </a>
+            <a href="certificates/edunet-cybersecurity.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-shield-alt"></i> <span>Cybersecurity (Edunet)</span>
+            </a>
+            <a href="certificates/CCEP.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-certificate"></i> <span>CCEP Certified</span>
+            </a>
+            <a href="certificates/CNSP.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-shield-virus"></i> <span>CNSP Certified</span>
+            </a>
+            <a href="Web Development Training_Internshala.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-laptop-code"></i> <span>Web Development (Internshala)</span>
+            </a>
+            <a href="certificates/MERN Stack (HawksCode).pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-layer-group"></i> <span>MERN Stack (HawksCode)</span>
+            </a>
+            <a href="certificates/ethical-hacking.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-bug"></i> <span>Ethical Hacking (Homeflic Wegrow)</span>
+            </a>
+            <a href="certificates/IBM_Nmap.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-network-wired"></i> <span>Nmap (IBM)</span>
+            </a>
+            <a href="certificates/CRTOM.pdf" target="_blank" class="cert-card-premium">
+                <i class="fas fa-user-secret"></i> <span>CRTOM</span>
+            </a>
+            <a href="certificates/ICIP.png" target="_blank" class="cert-card-premium">
+                <i class="fas fa-id-badge"></i> <span>ICIP</span>
+            </a>
+        </div>
+      </section>
 
-    <a href="certificates/Ethical Hacking Training _Internshala.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-user-secret"></i>
-      <span>Ethical Hacking (Internshala)</span>
-    </a>
+      <!-- Leadership -->
+      <section class="glass-section fade-in">
+        <div class="section-header">
+            <i class="fas fa-users-cog"></i>
+            <h2>Leadership & Extracurricular</h2>
+        </div>
+        <ul class="extra-list leadership-list">
+            <li><img src="images/metapoise_logo.webp" alt="logo"> <span>Student Convener – METAPOISE v1.0 (Dibrugarh University)</span></li>
+            <li><img src="images/pw_logo.png" alt="logo"> <span>Brand Ambassador – Physics Wallah</span></li>
+            <li><img src="images/du_logo.png" alt="logo"> <span>Class Representative – Dept. of CSE</span></li>
+            <li><img src="images/ncc_logo.jpg" alt="logo"> <span>NCC-C Certificate Holder</span></li>
+            <li><img src="images/mynest logo.png" alt="logo"> <span>Founder of Startup - MyNest</span></li>
+        </ul>
+      </section>
 
-    <a href="certificates/edunet-cybersecurity.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-shield-alt"></i>
-      <span>Cybersecurity (Edunet)</span>
-    </a>
+  </main>
 
-    <a href="certificates/ethical-hacking.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-bug"></i>
-      <span>Ethical Hacking (Homeflic Wegrow)</span>
-    </a>
-
-    <a href="certificates/IBM Cybersecurity.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-lock"></i>
-      <span>Cybersecurity Fundamentals (IBM)</span>
-    </a>
-
-    <a href="certificates/IBM_Nmap.pdf" target="_blank" class="cert-card">
-      <i class="fas fa-network-wired"></i>
-      <span>Nmap (IBM)</span>
-    </a>
-  </div>
-</section>
-
-
-
-
-<!-- Leadership -->
-<section class="about-section leadership-section">
-  <h2 class="fancy-heading">🌐 Leadership & Extracurricular</h2>
-  <ul class="extra-list">
-    <li><img src="images/metapoise_logo.webp" alt="metapoise_logo"> <span>Student Convener – METAPOISE v1.0 (Dibrugarh University)</span></li>
-    <li><img src="images/pw_logo.png" alt="pw_logo"> <span>Brand Ambassador – Physics Wallah</span></li>
-    <li><img src="images/du_logo.png" alt="du_logo"> <span>Class Representative – Dept. of CSE</span></li>
-    <li><img src="images/ncc_logo.jpg" alt="ncc_logo"> <span>NCC-C Certificate Holder</span></li>
-    <li><img src="images/mynest logo.png" alt="mynest_logo"> <span>Founder of Startup - MyNest</span></li>
-  </ul>
-</section>
-
-
-
-
-
-
-  <!-- Footer -->
   <footer class="footer">
     &copy; 2025 Pratismith Gogoi | Built with ❤️ 
   </footer>
 
-  <!-- Scripts -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="particles.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
