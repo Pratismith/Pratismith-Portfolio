@@ -16,43 +16,7 @@ if (particlesContainer) {
   });
 }
 
-// Theme Toggle Logic
-const themeToggleButton = document.getElementById("theme-toggle");
-const currentTheme = localStorage.getItem("theme");
 
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  updateThemeIcon(currentTheme);
-} else {
-    // Default to dark, no action needed as CSS :root is dark
-}
-
-if (themeToggleButton) {
-  themeToggleButton.addEventListener("click", () => {
-    let theme = document.documentElement.getAttribute("data-theme");
-    if (theme === "light") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-      updateThemeIcon("dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-      updateThemeIcon("light");
-    }
-  });
-}
-
-function updateThemeIcon(theme) {
-    if (!themeToggleButton) return;
-    const icon = themeToggleButton.querySelector("i");
-    if (theme === "light") {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
-}
 
 const input = document.getElementById("terminal-input");
 const terminalBody = document.getElementById("terminal-body");

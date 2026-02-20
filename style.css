@@ -11,31 +11,9 @@
   --font-body: 'Roboto', sans-serif;
 }
 
-[data-theme="light"] {
-  --bg: #f4f4f4;
-  --card: rgba(255, 255, 255, 0.85);
-  --muted: #555555;
-  --accent: #008c9e;
-  --accent-2: #b30089;
-  --white: #111111;
-  /* Dark text for light mode */
-}
 
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--white);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-left: 1rem;
-}
 
-.theme-toggle:hover {
-  transform: rotate(20deg) scale(1.1);
-  color: var(--accent);
-}
+
 
 * {
   margin: 0;
@@ -1119,6 +1097,11 @@ h3,
     display: block;
   }
 
+  /* Adjusted Navbar Padding for Mobile */
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
   /* Nav Links - Mobile View */
   .nav-links {
     position: fixed;
@@ -1792,8 +1775,8 @@ pre code {
 /* 6. Cert Grid Premium */
 .cert-grid-premium {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
 }
 
 .cert-card-premium {
@@ -1851,7 +1834,7 @@ pre code {
 /* 7. Leadership Premium Grid */
 .leadership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
 }
 
@@ -1959,4 +1942,58 @@ pre code {
 .projects-intro strong {
   color: var(--accent);
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .projects-intro {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-intro p {
+    font-size: 1rem;
+  }
+
+  .about-hero-premium h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Ensure content is not hidden behind navbar */
+  .about-hero-premium {
+    padding-top: 130px;
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .about-container-glass,
+  .blog-container-glass {
+    padding: 2rem 1rem;
+    margin-top: -30px;
+  }
+
+  .blog-hero {
+    height: auto;
+    min-height: 400px;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .blog-hero h1 {
+    font-size: 2rem;
+  }
+
+  .glass-section {
+    padding: 1.5rem;
+  }
+
+  .cyber-timeline {
+    margin-left: 10px;
+    padding-left: 30px;
+  }
+
+  .cyber-timeline-icon {
+    left: -46px;
+    width: 28px;
+    height: 28px;
+  }
 }
