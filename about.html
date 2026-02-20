@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   
@@ -61,10 +61,9 @@
             <h2>Who Am I?</h2>
         </div>
         <p style="font-size: 1.1rem; line-height: 1.8; color: #ddd;">
-            I’m a <strong>Computer Science Graduate</strong> and an entry-level <strong>Cybersecurity Engineer</strong> passionate about 
-            <span style="color: var(--accent);">ethical hacking, malware analysis, and AI-driven security</span>.
-            Currently deepening my skills in <strong>Penetration Testing</strong> and <strong>Securing Modern Applications</strong>. 
-            I enjoy decoding complex security challenges and building robust, intelligent systems that stand the test of time.
+            I’m a <strong>Computer Science Engineering Graduate,</strong> an entry-level <strong>Cybersecurity Engineer</strong> passionate about 
+            <span style="color: var(--accent);">ethical hacking, malware analysis, and AI-driven security</span> and a <strong>Full-Stack Web Developer</strong> building scalable projects using <span style="color: var(--accent);"> MongoDB, Express.js, React.js, and Node.js. </span> <br>
+           Currently experimenting with new ideas, sharpening my cybersecurity skillset, and pushing my limits in secure full-stack application development.
         </p>
       </section>
 
@@ -76,13 +75,33 @@
         </div>
         
         <div class="cyber-timeline">
+            <!-- Job 0 (New) -->
+            <div class="cyber-timeline-item">
+                <div class="cyber-timeline-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="cyber-card">
+                    <h3>Security & Platform Engineer</h3>
+                    <span class="role">MyNest (2023–Present)</span>
+                    <ul style="list-style-type: disc; padding-left: 20px; color: #ccc; margin-top: 10px; line-height: 1.6;">
+                        <li>Monitored backend application logs to identify anomalous activity, security events, and performance issues.</li>
+                        <li>Performed continuous platform and security monitoring aligned with SIEM concepts such as alert correlation and prioritization.</li>
+                        <li>Investigated alerts and communicated validated security and operational issues to developers for remediation.</li>
+                        <li>Assisted in incident analysis and post-issue review to reduce recurring alerts and platform risks.</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Job 1 -->
             <div class="cyber-timeline-item">
                 <div class="cyber-timeline-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                 <div class="cyber-card">
                     <h3><a href="certificates/JNV.pdf" target="_blank">Cybersecurity Trainer</a></h3>
                     <span class="role">JNV West Siang, Arunachal Pradesh</span>
-                    <p>Conducted training sessions on cybersecurity awareness and best practices for students and staff.</p>
+                    <ul style="list-style-type: disc; padding-left: 20px; color: #ccc; margin-top: 10px; line-height: 1.6;">
+                        <li>Conducted a multi-day Cyber Safety Awareness Program for students at Jawahar Navodaya Vidyalaya (JNV).</li>
+                        <li>Simplified complex internet concepts including DNS, packets, servers, and data tracking for non-technical audiences.</li>
+                        <li>Trained students to identify phishing attacks, weak passwords, fake profiles, and online scams.</li>
+                        <li>Promoted safe digital practices around privacy, social media usage, malware awareness, and online behavior.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -226,13 +245,57 @@
             <i class="fas fa-users-cog"></i>
             <h2>Leadership & Extracurricular</h2>
         </div>
-        <ul class="extra-list leadership-list">
-            <li><img src="images/metapoise_logo.webp" alt="logo"> <span>Student Convener – METAPOISE v1.0 (Dibrugarh University)</span></li>
-            <li><img src="images/pw_logo.png" alt="logo"> <span>Brand Ambassador – Physics Wallah</span></li>
-            <li><img src="images/du_logo.png" alt="logo"> <span>Class Representative – Dept. of CSE</span></li>
-            <li><img src="images/ncc_logo.jpg" alt="logo"> <span>NCC-C Certificate Holder</span></li>
-            <li><img src="images/mynest logo.png" alt="logo"> <span>Founder of Startup - MyNest</span></li>
-        </ul>
+        <div class="leadership-grid">
+            <div class="leadership-card">
+                <div class="leadership-icon">
+                    <img src="images/metapoise_logo.webp" alt="Metapoise Logo">
+                </div>
+                <div class="leadership-info">
+                    <h3>Student Convener</h3>
+                    <span>METAPOISE v1.0 (Dibrugarh University)</span>
+                </div>
+            </div>
+
+            <div class="leadership-card">
+                <div class="leadership-icon">
+                    <img src="images/pw_logo.png" alt="PW Logo">
+                </div>
+                <div class="leadership-info">
+                    <h3>Brand Ambassador</h3>
+                    <span>Physics Wallah</span>
+                </div>
+            </div>
+
+            <div class="leadership-card">
+                <div class="leadership-icon">
+                    <img src="images/du_logo.png" alt="DU Logo">
+                </div>
+                <div class="leadership-info">
+                    <h3>Class Representative</h3>
+                    <span>Dept. of CSE</span>
+                </div>
+            </div>
+
+            <div class="leadership-card">
+                <div class="leadership-icon">
+                    <img src="images/ncc_logo.jpg" alt="NCC Logo">
+                </div>
+                <div class="leadership-info">
+                    <h3>NCC-C Certificate</h3>
+                    <span>National Cadet Corps</span>
+                </div>
+            </div>
+
+            <div class="leadership-card">
+                <div class="leadership-icon">
+                    <img src="images/mynest logo.png" alt="MyNest Logo">
+                </div>
+                <div class="leadership-info">
+                    <h3>Founder</h3>
+                    <span>MyNest Startup</span>
+                </div>
+            </div>
+        </div>
       </section>
 
   </main>
