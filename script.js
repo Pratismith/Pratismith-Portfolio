@@ -22,13 +22,26 @@ const input = document.getElementById("terminal-input");
 const terminalBody = document.getElementById("terminal-body");
 
 const commands = {
-  help: "Available commands: cd, ls, clear, projects, resume, github, linkedin",
+  help: "Available commands: whoami, skills, projects, contact, cd, ls, clear, resume, github, linkedin",
   cd: "Use: cd [about], cd [projects], cd [contact]",
   ls: `
     <span class="cmd-link" data-cmd="projects">Projects</span>  
     <span class="cmd-link" data-cmd="resume">Resume</span>  
     <span class="cmd-link" data-cmd="github">Github</span>  
     <span class="cmd-link" data-cmd="linkedin">LinkedIn</span>`,
+  whoami: "I'm Pratismith Gogoi, an aspiring AI Engineer and Cybersecurity Enthusiast with a passion for building secure, scalable full-stack applications.",
+  skills: "Tech Stack: React, Node.js, Python, ML, TensorFlow, GenAI, Ethical Hacking, HTML/CSS, Git",
+  projects: `
+    Top Projects:<br>
+    - <a href="projects.html" style="color:var(--accent-2); text-decoration:underline;">Weather Dashboard</a> (Node.js/Express)<br>
+    - <a href="projects.html" style="color:var(--accent-2); text-decoration:underline;">Pneumonia Detection</a> (Deep Learning/Python)<br>
+    Type 'cd projects' to view all projects or click the links above.
+  `,
+  contact: `
+    Email: <a href="mailto:gogoipratismith01@gmail.com" style="color:var(--accent-2)">gogoipratismith01@gmail.com</a><br>
+    LinkedIn: <a href="https://linkedin.com/in/pratismith-gogoi" target="_blank" style="color:var(--accent-2)">linkedin.com/in/pratismith-gogoi</a><br>
+    GitHub: <a href="https://github.com/Pratismith" target="_blank" style="color:var(--accent-2)">github.com/Pratismith</a>
+  `
 };
 
 function handleCommand(command) {
@@ -68,11 +81,7 @@ function handleCommand(command) {
   }
 
   // direct commands
-  if (command === "projects") {
-    outputLine.innerHTML = "Opening Projects page...";
-    terminalBody.insertBefore(outputLine, input.parentElement);
-    setTimeout(() => (window.location.href = "projects.html"), 800);
-  } else if (command === "resume") {
+  if (command === "resume") {
     outputLine.innerHTML = "Downloading Resume...";
     terminalBody.insertBefore(outputLine, input.parentElement);
     setTimeout(() => window.open("assets/resume.pdf", "_blank"), 800);

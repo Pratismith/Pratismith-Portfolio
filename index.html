@@ -1,104 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pratismith | Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Pratismith Gogoi - AI Engineer, Cybersecurity Enthusiast, and Full-Stack Developer. View my portfolio, projects, and skills.">
-    <meta name="keywords" content="Pratismith Gogoi, Portfolio, AI Engineer, Cybersecurity, Full-Stack Developer, Python, Web Development">
-    <meta name="author" content="Pratismith Gogoi">
-    <meta property="og:title" content="Pratismith Gogoi | Portfolio">
-    <meta property="og:description" content="Aspiring AI Engineer & Cybersecurity Enthusiast. Check out my work!">
-    <meta property="og:image" content="images/profile.jpg">
-    
-    <!-- Google Fonts: Inter & Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  </head>
-  <body>
-    <!-- Background -->
-    <div id="particles-js"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">Pratismith G.</a>
-      </div>
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratismith | Portfolio</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Pratismith Gogoi - AI Engineer, Cybersecurity Enthusiast, and Full-Stack Developer. View my portfolio, projects, and skills.">
+  <meta name="keywords"
+    content="Pratismith Gogoi, Portfolio, AI Engineer, Cybersecurity, Full-Stack Developer, Python, Web Development">
+  <meta name="author" content="Pratismith Gogoi">
+  <meta property="og:title" content="Pratismith Gogoi | Portfolio">
+  <meta property="og:description" content="Aspiring AI Engineer & Cybersecurity Enthusiast. Check out my work!">
+  <meta property="og:image" content="images/profile.jpg">
 
-    <!-- Hero -->
-    <section class="hero fade-in">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Hi, I'm <span class="highlight">Pratismith Gogoi</span></h1>
-          <p>
-            Aspiring AI Engineer | Cybersecurity Enthusiast | Full-Stack Web
-            Developer
-          </p>
-          <div class="cta-buttons">
-            <a href="assets/resume.pdf" class="btn resume" target="_blank">
-                <i class="fas fa-file-alt"></i> View Resume
-            </a>
-            <a href="https://github.com/Pratismith" class="btn github" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/pratismith-gogoi" class="btn linkedin" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/profile.jpg" alt="Pratismith Gogoi" loading="lazy" />
-        </div>
-      </div>
-    </section>
+  <!-- Google Fonts: Inter & Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
 
-    <!-- Terminal Section -->
-    <section class="terminal-container fade-in">
-      <div class="terminal" id="terminal">
-        <div class="terminal-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="title">Terminal</span>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Pratismith G.</a>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="highlight">Pratismith Gogoi</span></h1>
+
+        <!-- Live Badge -->
+        <div class="status-badge fade-in">
+          <span class="live-dot"></span>
+          <strong>Currently:</strong> Building an AI-powered intrusion detection system
         </div>
-        <div class="terminal-body" id="terminal-body">
-          <div class="line">
-            Welcome to
-            <span class="highlight">Pratismith Gogoi's</span> Portfolio!
-          </div>
-          <div class="line">
-            Type <span class="highlight">help</span> to see available commands.
-          </div>
-          <div class="line">---------------------------------------------</div>
-          <div class="line" id="output"></div>
-          <div class="input-line">
-            <span class="prompt">$</span>
-            <input type="text" id="terminal-input" autofocus />
-          </div>
+
+        <!-- Typed.js Subtitle -->
+        <p class="hero-subtitle">
+          <span id="typed-text"></span>
+        </p>
+        <div class="cta-buttons">
+          <a href="assets/resume.pdf" class="btn resume" target="_blank">
+            <i class="fas fa-file-alt"></i> View Resume
+          </a>
+          <a href="https://github.com/Pratismith" class="btn github" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/pratismith-gogoi" class="btn linkedin" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer">&copy; 2025 Pratismith Gogoi | Built with ❤️</footer>
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Pratismith Gogoi" loading="lazy" />
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="script.js"></script>
-  </body>
+    <!-- Quick Stats -->
+    <div class="quick-stats fade-in">
+      <div class="stat-item"><span class="highlight">14</span> Projects</div>
+      <div class="stat-item"><span class="highlight">13</span> Certifications</div>
+      <div class="stat-item"><span class="highlight">2+</span> Years Building</div>
+    </div>
+  </section>
+
+  <!-- Skills Snapshot Section -->
+  <section class="skills-snapshot fade-in">
+    <h2 class="section-title">What I Do</h2>
+    <div class="snapshot-grid">
+      <div class="snapshot-card">
+        <div class="snapshot-icon"><i class="fas fa-robot"></i></div>
+        <h3>Cybersecurity</h3>
+        <p>Ethical hacking, forensics, malware analysis & network security.</p>
+
+      </div>
+      <div class="snapshot-card">
+        <div class="snapshot-icon"><i class="fas fa-user-secret"></i></div>
+        <h3>Web Dev</h3>
+        <p>React, Node.js, full-stack scalable web applications.</p>
+      </div>
+      <div class="snapshot-card">
+        <div class="snapshot-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>AI & ML</h3>
+        <p>Build intelligent models, NLP solutions & deep learning pipelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Preview -->
+  <section class="featured-projects fade-in">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="preview-grid">
+      <!-- Project 1: AssamTales -->
+      <div class="project-prev-card">
+        <div class="prev-header">
+          <h3><i class="fas fa-mountain"></i> Assam Tales</h3>
+        </div>
+        <p>Region-focused digital marketing studio helping Northeast India's tourism businesses grow through
+          storytelling and data-driven content strategy.</p>
+        <div class="tags">
+          <span class="tech">React</span>
+          <span class="tech">Content Strategy</span>
+          <span class="tech">SEO</span>
+        </div>
+        <a href="https://imaginative-bubblegum-075886.netlify.app/" target="_blank" class="btn-sm"><i
+            class="fas fa-external-link-alt"></i> View Project</a>
+      </div>
+
+      <!-- Project 2: AgroDoctor -->
+      <div class="project-prev-card">
+        <div class="prev-header">
+          <h3><i class="fas fa-leaf"></i> AgroDoctor</h3>
+        </div>
+        <p>End-to-end AI system using ResNet18 and computer vision to detect crop diseases from leaf images. Deployed as
+          an interactive Streamlit app.</p>
+        <div class="tags">
+          <span class="tech">Python</span>
+          <span class="tech">PyTorch</span>
+          <span class="tech">OpenCV</span>
+        </div>
+        <a href="https://agrodoctor-plant-disease-e5uq5wyurwdpelkepkgzgz.streamlit.app/" target="_blank"
+          class="btn-sm"><i class="fas fa-external-link-alt"></i> View Project</a>
+      </div>
+
+      <!-- Project 3: Evensia -->
+      <div class="project-prev-card">
+        <div class="prev-header">
+          <h3><i class="fas fa-calendar-alt"></i> Evensia</h3>
+        </div>
+        <p>Modern event discovery interface with a focus on clean UI/UX. Features curated listings, category navigation,
+          and a responsive layout.</p>
+        <div class="tags">
+          <span class="tech">React</span>
+          <span class="tech">CSS3</span>
+          <span class="tech">UI/UX Design</span>
+        </div>
+        <a href="https://evensia00.netlify.app/" target="_blank" class="btn-sm"><i class="fas fa-external-link-alt"></i>
+          View Project</a>
+      </div>
+    </div>
+    <div class="view-all-container">
+      <a href="projects.html" class="btn">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- GitHub Stats -->
+  <section class="github-stats-section fade-in">
+    <h2 class="section-title">GitHub Activity</h2>
+    <div class="github-stats-container">
+      <a href="https://github.com/Pratismith" target="_blank">
+        <img
+          src="https://github-readme-stats-sigma-five.vercel.app/api?username=Pratismith&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0f14"
+          alt="Pratismith's GitHub Stats" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Terminal Section -->
+  <section class="terminal-container fade-in">
+    <div class="terminal" id="terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="title">Terminal</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="line">
+          Welcome to
+          <span class="highlight">Pratismith Gogoi's</span> Portfolio!
+        </div>
+        <div class="line">
+          Type <span class="highlight">help</span> to see available commands.
+        </div>
+        <div class="line">---------------------------------------------</div>
+        <div class="line" id="output"></div>
+        <div class="input-line">
+          <span class="prompt">$</span>
+          <input type="text" id="terminal-input" autofocus />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section fade-in">
+    <h2>Want to collaborate or just say hi?</h2>
+    <p>I'm currently looking for new opportunities and my inbox is always open.</p>
+    <a href="contact.html" class="btn cta-btn">Get In Touch <i class="fas fa-paper-plane"></i></a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">&copy; 2025 Pratismith Gogoi | Built with ❤️</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed-text', {
+      strings: ['AI Engineer ^300🤖', 'Cybersecurity Enthusiast ^300🔐', 'Full-Stack Developer ^300💻'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
 </html>
