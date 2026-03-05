@@ -288,4 +288,112 @@ if (terminalBody) {
 }
 
 
+/* =========================================
+   CUSTOM DYNAMIC CURSOR
+   ========================================= */
+(function () {
+  // Only activate on devices with a real pointer (mouse, trackpad)
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
+  // Create cursor DOM elements
+  const dot = document.createElement('div');
+  dot.classList.add('cursor-dot');
+  document.body.appendChild(dot);
+
+  const ring = document.createElement('div');
+  ring.classList.add('cursor-ring');
+  document.body.appendChild(ring);
+
+  // Mouse position tracking
+  let mouseX = -100, mouseY = -100;
+  let ringX = -100, ringY = -100;
+  let trailCounter = 0;
+
+  // Track mouse position
+  document.addEventListener('mousemove', function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Position the dot immediately (precise tracking)
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+
+    // Show cursor elements if hidden
+    dot.classList.remove('hidden');
+    ring.classList.remove('hidden');
+
+    // Spawn trail particles (throttled — every 3rd event)
+    trailCounter++;
+    if (trailCounter % 3 === 0) {
+      spawnTrail(mouseX, mouseY);
+    }
+  });
+
+  // Hide cursor when leaving the viewport
+  document.addEventListener('mouseleave', function () {
+    dot.classList.add('hidden');
+    ring.classList.add('hidden');
+  });
+
+  document.addEventListener('mouseenter', function () {
+    dot.classList.remove('hidden');
+    ring.classList.remove('hidden');
+  });
+
+  // Smooth ring following with lerp (linear interpolation)
+  function animateRing() {
+    const lerpFactor = 0.15;
+    ringX += (mouseX - ringX) * lerpFactor;
+    ringY += (mouseY - ringY) * lerpFactor;
+
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Interactive element hover detection
+  const interactiveSelectors = 'a, button, .btn, .btn-sm, .btn-back, .project-card, .snapshot-card, .project-prev-card, .cert-card-premium, .leadership-card, .skill-pill, .cyber-card, .blog-card, input, textarea, .hamburger, .nav-links a, .cmd-link';
+
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.closest(interactiveSelectors)) {
+      dot.classList.add('hover');
+      ring.classList.add('hover');
+    }
+  });
+
+  document.addEventListener('mouseout', function (e) {
+    if (e.target.closest(interactiveSelectors)) {
+      dot.classList.remove('hover');
+      ring.classList.remove('hover');
+    }
+  });
+
+  // Click animation
+  document.addEventListener('mousedown', function () {
+    dot.classList.add('click');
+    ring.classList.add('click');
+  });
+
+  document.addEventListener('mouseup', function () {
+    dot.classList.remove('click');
+    ring.classList.remove('click');
+  });
+
+  // Trail particle spawner
+  function spawnTrail(x, y) {
+    const trail = document.createElement('div');
+    trail.classList.add('cursor-trail');
+    trail.style.left = x + 'px';
+    trail.style.top = y + 'px';
+    document.body.appendChild(trail);
+
+    // Self-remove after animation completes (600ms)
+    setTimeout(function () {
+      if (trail.parentNode) {
+        trail.parentNode.removeChild(trail);
+      }
+    }, 600);
+  }
+})();
