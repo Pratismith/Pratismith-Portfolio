@@ -282,7 +282,7 @@ if (terminalBody) {
      typeText(line2, "Type 'help' to see available commands.", 30, () => {
          terminalBody.appendChild(separator);
          terminalBody.appendChild(inputLine);
-         inputLine.querySelector("input").focus();
+         inputLine.querySelector("input").focus({ preventScroll: true });
      });
   });
 }

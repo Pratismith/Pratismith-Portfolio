@@ -143,6 +143,7 @@ h3,
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -515,7 +516,7 @@ h3,
 .project-card h2 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #ff00c8;
+  color: var(--accent);
 }
 
 .project-card p {
@@ -1600,6 +1601,7 @@ pre code {
 
 .about-profile-wrapper {
   position: relative;
+  display: inline-block;
   margin-bottom: 2rem;
 }
 
